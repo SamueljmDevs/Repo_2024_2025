@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!--<script src="hola_mundo.js"></script>-->
+    <script>
+        // Console log es para imprimir por consola el resultado o el texto que se quiera
+        console.log("Hola Mundo")
+
+        // Variables
+        var myString = "Samuel Devs"
+        console.log(myString)
+        // let es para una variable que se use dentro de un bloque de código
+        let myString2 = "Pache Devs"
+        // alert para que nada más abrir una página salga un mensaje
+        //alert("Uno hace lo que puede");
+
+        // const es una constante, tiene el mismo rango que let
+        const myNombre = "Pache"
+        const myEdad = 30
+        const feliz = false
+        //
+        console.log("myNombre es " + myNombre + " y es un " + typeof (myNombre))
+        console.log("myEdad es " + myEdad + " y es un " + typeof (myEdad))
+        console.log("La felicidad es " + feliz + " y es un " + typeof (feliz))
+
+        //Condicionales if-else (if-elseif-else)
+        if (myEdad <= 40) {
+            console.log("Sigues siendo joven")
+        } else {
+            console.log("Te haces viejo chacho")
+        }
+
+        //Switch
+        var numero = prompt("Escribe un número del 1 al 3")
+        switch (numero) {
+            case "1":
+                alert("Pues uno")
+                break;
+            case "2":
+                alert("Pues dos")
+                break;
+            case "3":
+                alert("Pues tres")
+                break;
+            default:
+                alert("Del 1 al 3 macho, no es tan difícil")
+                break;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Lección básica</h1>
+    <p>Pulsa F12 para ver las cosas en consola</p>
+</body>
+
+</html>
