@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    background-color: lightgray;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h2 {
+    width: 100%;
+}
+
+p {
+    width: 45%;
+}
+
+img {
+    width: auto;
+    height: 300px;
+}
