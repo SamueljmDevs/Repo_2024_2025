@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos repetidos dentro de un array</title>
+    <script>
+        const repetidos = (arr) => {
+            var arr_repetidos = []
+            var ordenada = arr.sort(function (a, b) { return a - b })
+            for (let i = 0; i < ordenada.length; i++) {
+                if (ordenada[i] == ordenada[i + 1]) {
+                    arr_repetidos.push(ordenada[i])
+                }
+            }
+            return arr_repetidos
+        }
+        var array = [10, 3, 5, 3, 10]
+        console.log(repetidos(array))
+    </script>
+</head>
+
+<body>
+    <h1>Elementos Repetidos en un Array</h1>
+    <p>
+        Crea una función que recibe un array de números positivos y devuelva otro array con los números repetidos del
+        primero.
+        <br>
+        Por ejemplo si le paso la lista de números:
+        <br>
+        10, 3, 5, 3, 10
+        <br>
+        Deberá devolver el array
+        <br>
+        3, 10
+        <br>
+        por que estos números están repetidos.
+        <br>
+        El array original no se modifica
+    </p>
+
+</body>
+
+</html>
