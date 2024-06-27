@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuento ordenado</title>
+    <script>
+
+        var colores = ['verde', 'azul', 'verde', 'azul', 'azul', 'gris']
+
+        const recuento = (arr) => {
+            var conteo = {} //creamos el objeto
+            var conjunto = new Set(arr)//creamos el set para contener el color y sus repeticiones
+            var opciones = Array.from(conjunto)//desde ese set creamos un array
+
+            for (let i = 0; i < opciones.length; i++) {
+                conteo[opciones[i]] = 0 //De cada color ponemos sus repeticiones a cero
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[j] == opciones[i]) {
+                        conteo[opciones[i]]++
+                    }
+                }
+            }
+            return conteo;
+        }
+        console.log(recuento(colores))
+
+
+
+
+
+        /*let colores = ["blanco", "verde", "rojo", "verde", "verde", "rojo", "verde", "azul"]
+        function contar(valores) {
+
+            let conteo = {};
+            //eliminar repetidos y quedan valores únicos
+            let conjunto = new Set(valores);
+            let opciones = Array.from(conjunto);
+            //compara cada valor de la lista
+            //con uno de los únicos (opciones)
+            //guarda la cuenta en el objeto 
+            // como nueva propiedad (opcion: valor)
+            for (i = 0; i < opciones.length; i++) {
+                conteo[opciones[i]] = 0;
+                for (let j = 0; j < valores.length; j++) {
+                    if (valores[j] == opciones[i]) {
+                        conteo[opciones[i]]++;
+                    }
+                }
+            }
+            return conteo;
+        }
+        function ordenar(cuenta) {
+            let i = 0;
+            let aux = {}; //objeto auxiliar
+            let lista = [];
+            let ordenado = [];
+            //Pasa las propiedades del objeto a un array
+            //de objetos {opción:valor}
+            for (key in cuenta) {
+                aux = {};
+                aux.nombre = key;
+                aux.valor = cuenta[key];
+                lista.push(aux);
+            }
+            //ordena de mayor a menor
+            lista.sort((a, b) => a.valor > b.valor ? -1 : 1);
+            ordenado = lista.map((v, i, l) => {
+                let obj = {};
+                obj[v.nombre] = v.valor;
+                return obj
+            })
+            return ordenado;
+        }
+        let recuento = contar(colores);
+        let lista = ordenar(recuento);
+        console.log(lista);
+        */
+
+    </script>
+</head>
+
+<body>
+    <h1>Recuento ordenado</h1>
+    <p>
+        En el desafío de hoy se piden dos funciones:
+        <br>
+        Una cogerá una lista de diferentes opciones y obtendrá un objeto formado por el nombre de cada opción y el
+        número de veces que aparece.
+        <br>
+        La otra función parte del objeto calculado en la función anterior y crea una lista con las opciones ordenadas
+        por el número de veces que aparece en orden creciente.
+        <br>
+        Por ejemplo:
+        <br>
+        colores = ['verde', 'azul', 'verde', azul','azul', 'gris']
+        <br>
+        Recuento devolverá un objeto como
+        <br>
+        {verde : 2, azul : 3, gris: 1}
+        <br>
+        Y la función para ordenar devolverá una lista ordenada
+        <br>
+        [{azul :3}, {verde:2}, {gris: 1}]
+    </p>
+</body>
+
+</html>

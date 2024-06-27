@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+
+        const calculadora = (num1, num2, signo) => {
+            num1 = parseInt(num1)
+            num2 = parseInt(num2)
+            var resultado = 0;
+            switch (signo) {
+                case '+':
+                    resultado = num1 + num2
+                    break;
+                case '-':
+                    resultado = num1 - num2
+                    break;
+                case '*':
+                    resultado = num1 * num2
+                    break;
+                case '/':
+                    if (num2 != 0) {
+                        resultado = num1 / num2
+                    } else {
+                        resultado = null
+                    }
+                    break;
+                case '%':
+                    resultado = num1 % num2
+                    break;
+                default:
+                    alert("El signo introducido es incorrecto, pulse F5 para reiniciar")
+                    break;
+            }
+            var respuesta = "El resultado de " + num1 + " " + signo + " " + num2 + " es " + resultado
+            return respuesta
+        }
+
+        var primer_numero = prompt("Introduzca el primer número")
+        var segundo_numero = prompt("Introduzca el segundo número")
+        var signo_elegido = prompt("Introduzca el signo de la operación a realizar (+ , - , * , / , %)")
+        alert(calculadora(primer_numero, segundo_numero, signo_elegido))
+    </script>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <p>
+        Se trata decrear una función calculadora que recibirá tres argumentos: los dos primeros deben ser números y el
+        tercero será un símbolo: + - * / %. Las operaciones respectivas de estos símbolos será sumar, restar,
+        multiplicar, dividir y resto.
+        <br>
+        La función de contemplar errores como dividir por cero en cuyo caso devolverá null.
+        <br>
+        Por ejemplo
+        <br>
+        calcular(3,4, "*") //12
+        <br>
+        calcular (3, 0 , "/") //null
+        <br>
+        calcular (6, 3 , "%") // 1
+    </p>
+</body>
+
+</html>
