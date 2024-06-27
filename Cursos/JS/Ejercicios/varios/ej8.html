@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La tortilla</title>
+    <script>
+        var comensales = parseInt(prompt("¿Cuantas personas vienen?"))
+
+        const PATATA_POR_PERSONA = 1
+        const HUEVOS_POR_PERSONA = 5
+        const CEBOLLA_POR_PERSONA = 300
+
+        function calculadora_tortilla(personas) {
+            let total_patatas = PATATA_POR_PERSONA * personas
+            let total_huevos = HUEVOS_POR_PERSONA * personas
+            let total_cebolla = CEBOLLA_POR_PERSONA * personas
+
+            let receta = "Para hacer una tortilla para " + personas + " personas necesitaremos: "
+                + total_patatas + " kg de patatas, " + total_huevos + " huevos y " + total_cebolla + " gramos de cebolla."
+            return receta
+        }
+        alert(calculadora_tortilla(comensales))
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

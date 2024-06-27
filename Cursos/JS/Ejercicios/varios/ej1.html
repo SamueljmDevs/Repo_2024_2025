@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script>
+        var precio_sin_iva = parseFloat(prompt("¿Cuánto ha sido la factura?"))
+        var iva = parseFloat(prompt("¿De cuanto es el IVA?"))
+        function calculadoraIva(coste, ivaCuenta) {
+            return coste + ((ivaCuenta * coste) / 100);
+        }
+        alert("El total de la factura es de: " + calculadoraIva(precio_sin_iva, iva) + "€, " + precio_sin_iva + "€ con un " +
+            iva + "% de IVA.")
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

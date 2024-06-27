@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script>
+        do {
+            var numero_escogido = prompt("Introduzca un número de 2 cifras")
+            if (numero_escogido < 10) {
+                alert("Un número de 2 cifras, del 10 para adelante")
+            } else if (numero_escogido > 99) {
+                alert("Un número de DOS (2) cifras, del 10 al 99")
+            }
+        } while (numero_escogido < 10 || numero_escogido > 99)
+
+        const solucion = (numero) => {
+
+            let decenas = parseInt(numero / 10)
+            let unidades = numero % 10
+
+            let resultado = "Para el número " + numero + " obtenemos que tiene " + decenas + " decenas y " + unidades + " unidades."
+
+            return resultado
+        }
+
+        alert(solucion(numero_escogido))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
