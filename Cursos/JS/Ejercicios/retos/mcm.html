@@ -25,6 +25,20 @@
         var mcm = multiplos_primer_numero.find(e => multiplos_segundo_numero.find(f => f == e))
 
         alert("El mcm(" + primer_numero + "," + segundo_numero + ") es " + mcm)
+        /*
+        SOLUCIÓN DE LA PÁGINA
+        //Si el mayor de los dos no es múltiplo del otro
+        //vamos probando multiplos del mayor hasta que sea
+        //también múltiplo del menor.
+        function mcm(a,b){
+            let mul = Math.max(a,b);
+            let inc = mul;
+        while ( mcm  % a !=0 || mul % b != 0){
+        mul += inc;
+    }
+    return mul;
+}
+        */
     </script>
 </head>
 
