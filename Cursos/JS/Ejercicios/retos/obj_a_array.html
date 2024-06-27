@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De objeto a Array</title>
+    <script>
+        let objeto = { pan: 23, vino: 10, aceite: 12 }
+        function toArray(obj) {
+            let res = [];
+            for (key in obj) {//Por cada key que haya en el objeto
+                res.push([key, obj[key]])//Mete en el array la key junto a cada valor referente a esa key
+            }
+            return res;
+        }
+        console.log(toArray(objeto))
+    </script>
 </head>
+
 <body>
-    
+    <h1>De objeto a array</h1>
+    <p>
+        La función que debes escribir lleva como argumento un objeto de la forma {key1: valor1, key2: valor3...} y
+        deberá devolver un array bidimensional, donde cada elemento será uno de los pares clave valor del objeto
+        <br>
+        Por ejemplo:
+        <br>
+        let objeto = {pan:23, vino: 10, aceite: 12}
+        <br>
+        let precios = toArray(objeto)
+        <br>
+        precios contendrá
+        <br>
+        [['pan',23], ['vino', 10], ['aceite', 12]]
+    </p>
 </body>
+
 </html>
