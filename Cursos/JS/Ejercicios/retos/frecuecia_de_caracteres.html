@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frecuencia de Caracteres</title>
+    <script>
+        var resultado = []
+        var texto = prompt("Introduzca la frase a analizar").toLowerCase()
+        console.log(texto)
+        var array_texto = []
+        for (let i = 0; i < texto.length; i++) {
+            if (texto.charAt(i) != " ") {
+                array_texto.push(texto.charAt(i))
+            }
+        }
+        console.log(array_texto)
+
+
+        function organizador(caracter, cantidad) {
+            let obj = { 'car': caracter, 'veces': cantidad }
+            resultado.push(obj)
+        }
+
+        console.log(resultado)
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Contador de caracteres</h1>
+    <p>
+        Debes escribir un programa que encuentre la frecuencia con que aparecen los distintos caracteres (letras y
+        números) dentro de una cadena de texto. El resultado se devuelve una matriz de objetos.<br> Cada uno de estos
+        objetos tiene 2 campos: carácter (caracter) y número de veces que aparece (veces). La matriz estará ordenada por
+        el campo carácter. No se diferencia entre mayúsculas y minúsculas ni entre vocales acentuadas.
+        <br>
+        Ejemplo:
+        <br>
+        contarCar("Hoy ya es día 10")
+        <br>
+        deberá devolver:
+        <br>
+        {car: '0', veces: 1}<br>
+        {car: '1', veces: 1}<br>
+        {car: 'a', veces: 2}<br>
+        {car: 'd', veces: 1}<br>
+        {car: 'e', veces: 1}<br>
+        {car: 'h', veces: 1}<br>
+        {car: 'i', veces: 1}<br>
+        {car: 'o', veces: 1}<br>
+        {car: 's', veces: 1}<br>
+        {car: 'y', veces: 2}<br>
+    </p>
+</body>
+
+</html>
