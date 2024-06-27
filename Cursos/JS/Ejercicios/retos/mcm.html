@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mínimo Común Múltiplo</title>
+    <script>
+        var primer_numero = prompt("Introduzca el primer número")
+        var segundo_numero = prompt("Introduzca el segundo número")
+
+        function multiplicador(num) {
+            var arr = []
+            for (let i = 1; i <= 25; i++) {
+                arr.push(num * i)
+            }
+            return arr
+        }
+        var multiplos_primer_numero = multiplicador(primer_numero)
+        var multiplos_segundo_numero = multiplicador(segundo_numero)
+
+        //console.log(multiplos_primer_numero)
+        //console.log(multiplos_segundo_numero)
+
+        var mcm = multiplos_primer_numero.find(e => multiplos_segundo_numero.find(f => f == e))
+
+        alert("El mcm(" + primer_numero + "," + segundo_numero + ") es " + mcm)
+    </script>
+</head>
+
+<body>
+    <h1>Mínimo Común Múltiplo</h1>
+    <p>
+        Se trata de encontrar el mínimo común múltiplo de dos números enteros positivos.
+        ¿Recuerdas que es eso?
+        Es el número entero que es múltiplo de los dos números, o sea, que es divisible entre los dos números.
+        Ejemplo mcm(6,4) es 12 porque es el número más pequeño divisible por 6 (12 /6 es 2) y por 4 (12/4 es 3).
+    </p>
+</body>
+
+</html>
