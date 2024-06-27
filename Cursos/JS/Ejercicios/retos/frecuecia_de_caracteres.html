@@ -18,12 +18,26 @@
         console.log(array_texto)
 
 
-        function organizador(caracter, cantidad) {
-            let obj = { 'car': caracter, 'veces': cantidad }
-            resultado.push(obj)
+        function organizador(arr) {
+            var arr_ordenado = arr.sort()
+            var conteo = []
+
+            //console.log(arr_ordenado)
+
+            for (let i = 0; i < arr_ordenado.length; i++) {
+                var veces = 1;
+                while (arr_ordenado[i] == arr_ordenado[i + 1]) {
+                    veces++;
+                    i++;
+                }
+                var obj = { car: arr_ordenado[i], veces: veces }
+                conteo.push(obj);
+
+            }
+            return conteo
         }
 
-        console.log(resultado)
+        console.log(organizador(array_texto))
 
 
     </script>
