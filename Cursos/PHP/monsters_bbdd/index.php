@@ -1,20 +1,29 @@
-<?php
-$server = 'localhost';
-$user = 'jose';
-$pass = 'josefa';
-$database = 'monster_bbdd';
-
-$conexion = new mysqli($server, $user, $pass, $database);
-
-
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monstruos y Mitología</title>
+    <title>Animales Fantásticos</title>
+    <style>
+        table {
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +31,14 @@ $conexion = new mysqli($server, $user, $pass, $database);
     if ($conexion->connect_errno) {
         die("Conexión fallida" . $conexion->connect_errno);
     } else {
-        echo "<p>Conectado</p>";
+        $consulta = 'SELECT * from criaturas';
+        $datos = mysqli_query($conexion, $consulta);
+        echo "<table>";
+        echo "<tr><th>Nombre</th><th>Descripción</th><th>Imagen</th></tr>";
+        while ($fila = mysqli_fetch_assoc($datos)) {
+            echo "<tr><td>" . $fila['nombre'] . "</td><td>" . $fila['descripcion'] . "</td><td><img src='img/" . $fila['retrato'] . "'></td></tr>";
+        };
+        echo "</table>";
     }
     ?>
 </body>
