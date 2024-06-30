@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.slider {
+    position: relative;
+    width: 320px;
+    padding-top: 1em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+h1 {
+    text-align: center;
+}
+div>p{
+    margin: 1em;
+}
+footer {
+    height: 3em;
+    margin-top: auto;
+    background-color: black;
+
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    display: block;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+
+    to {
+        opacity: 1;
+    }
+}
