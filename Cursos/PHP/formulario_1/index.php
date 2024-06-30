@@ -25,31 +25,30 @@ if (isset($_POST["enviar"])) {
 </head>
 
 <body>
-    <form action="index.php" method="post" enctype="multipart/form-data">
+    <h1>Formulario</h1>
+    <form action="recogida.php" method="post" enctype="multipart/form-data">
         <label for="nombre">Introduza su nombre:</label>
-        <input type="text" name="nombre" value="<?php if (isset($_POST["nombre"]) && !$error_nombre) echo $_POST["nombre"] ?>">
-        <?php
-        if (isset($_POST["enviar"]) && $error_nombre) {
-            echo "<span class='error'>* El campo no puede dejarse vacío.</span>";
-        }
-        ?>
+        <input type="text" name="nombre" value="">
         <br>
         <label for="edad">Introduzca su edad:</label>
-        <input type="number" name="edad" value="<?php if (isset($_POST["edad"]) && !$error_edad) echo $_POST["edad"] ?>">
-        <?php
-        if (isset($_POST["enviar"]) && $error_edad) {
-            echo "<span class='error'>* El campo no puede dejarse vacío ni ser menor de 0.</span>";
-        }
-        ?>
+        <input type="number" name="edad" value="">
+        <br>
+        <label for="ciudad">Nacido en: </label>
+        <select name="ciudad" id="ciudad">
+            <option value="Córdoba">Córdoba</option>
+            <option value="Málaga" selected>Málaga</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Granada">Granada</option>
+        </select>
+        <br>
+        <label for="sexoH">Hombre</label>
+        <input type="radio" name="sexo" id="sexoH" value="hombre" checked></input>
+        <label for="sexoM">Mujer</label>
+        <input type="radio" name="sexo" id="sexM" value="mujer"></input>
         <br>
         <input type="submit" value="Enviar" name="enviar">
         <input type="reset" name="borrar" value="Borrar">
     </form>
-    <?php
-    if (isset($_POST["enviar"]) && !$error_form) {
-        echo "<span class='correcto'>Los datos se recibieron con éxito</span>";
-    }
-    ?>
 </body>
 
 </html>
