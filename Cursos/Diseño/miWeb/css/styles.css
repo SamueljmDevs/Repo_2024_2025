@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 5rem;
+
+    background-color: rgb(3, 87, 3);
+}
+
+nav {
+    height: 2rem;
+
+    background-color: rgb(185, 102, 33)
+}
+
+section {
+    margin: 1rem;
+}
+
+article {
+    margin: 1rem 0;
+}
+
+article>p {
+    text-align: justify;
+}
+
+footer {
+    height: 3em;
+    margin-top: auto;
+
+    background-color: rgb(3, 87, 3);
+}
